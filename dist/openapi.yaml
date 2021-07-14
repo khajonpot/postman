@@ -1,0 +1,79 @@
+openapi: 3.0.0
+info:
+  title: API Document
+  description: API Document
+  version: 1.0.0
+  contact:
+    name: AppMan
+    email: test@appman.co.th
+servers:
+  - url: /smpilp
+    description: localhost
+paths:
+  /person:
+    get:
+      description: Describe this route
+      summary: Describe this route
+      responses:
+        "200":
+          description: Description
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Description
+          content:
+            application/json:
+              schema:
+                type: string
+        "401":
+          description: Description
+          content:
+            application/json:
+              schema:
+                type: string
+        "404":
+          description: Description
+          content:
+            application/json:
+              schema:
+                type: string
+        "500":
+          description: Description
+          content:
+            application/json:
+              schema:
+                type: string
+components:
+  schemas:
+    Person:
+      description: Person information
+      type: object
+      required:
+        - name
+        - surname
+        - idcard
+      properties:
+        name:
+          type: string
+          example: Khajonpot
+        surname:
+          type: string
+          example: Sawangdee
+        idcard:
+          type: number
+          format: int32
+          maxLength: 13
+          minLength: 13
+          example: 1234567890123
+  securitySchemes:
+    Bearer:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    Basic:
+      type: http
+      scheme: basic
+security:
+  - Bearer:
+      - /person
