@@ -1,20 +1,19 @@
-Person:
-  description: Person information
-  type: object
-  required:
-    - name
-    - surname
-    - idcard
-  properties:
-    name: 
-      type: string
-      example: Khajonpot
-    surname:
-      type: string
-      example: Sawangdee
-    idcard:
-      type: number
-      format: int32
-      maxLength: 13
-      minLength: 13
-      example: 1234567890123
+description: Person information
+type: object
+required:
+  - name
+  - surname
+  - idcard
+properties:
+  name: 
+    type: string
+    example: Khajonpot
+  surname:
+    type: string
+    example: Sawangdee
+  idcard:
+    type: number
+    format: int32
+    maxLength: 13
+    minLength: 13
+    example: 1234567890123
