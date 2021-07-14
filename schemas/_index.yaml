@@ -1,0 +1,4 @@
+Person:
+  $ref: person.yaml
+Error:
+  $ref: error.yaml

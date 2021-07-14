@@ -13,10 +13,15 @@ servers:
     description: localhost
 
 paths:
-  $ref: "./paths/index.yaml"
+  /person:
+    $ref: "./paths/person.yaml"
 
 components:
-  $ref: ./components/index.yaml
+  schemas:
+    $ref: "./schemas/_index.yaml"
+  securitySchemes:
+    $ref: "./securitySchemes.yaml"
 
 security:
-  $ref: ./security/index.yaml
+  - Bearer:
+    - /person

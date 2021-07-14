@@ -1,0 +1,9 @@
+description: Error information
+type: object
+properties:
+  code: 
+    type: number
+    example: 400
+  message:
+    type: string
+    example: Error message

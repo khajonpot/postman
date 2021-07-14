@@ -7,7 +7,7 @@ get:
       content: 
         application/json:
           schema:
-            "$ref":  "../components/schemas/person.yaml#/Person"
+            $ref:  "../schemas/person.yaml"
     400:
       description: Description
       content: 
