@@ -1,0 +1,22 @@
+openapi: 3.0.0
+
+info:
+  title: API Document
+  description: API Document
+  version: 1.0.0
+  contact:
+    name: AppMan
+    email: test@appman.co.th
+
+servers:
+  - url: /smpilp
+    description: localhost
+
+paths:
+  $ref: "./paths/index.yaml"
+
+components:
+  $ref: ./components/index.yaml
+
+security:
+  $ref: ./security/index.yaml
